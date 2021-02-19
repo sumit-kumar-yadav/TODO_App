@@ -1,13 +1,14 @@
-
-
-
+body{
+    font-family: sans-serif;
+    /* background-color: #eefeff; */
+    letter-spacing: 2px;
+}
 
 #form{
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
 }
 
 h1{
@@ -16,22 +17,64 @@ h1{
 
 #description-area{
     width: 100%;
-    /* padding: 5px; */
+    font-size: 1.1rem;
+    border: none;
 }
 
 #catogary-and-due-date-container{
-    width: 100%;
+    width: calc(100% - 50px);
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 #category{
     width: 50%;
     height: 50px;
+    border-right: 2px solid grey;
+    margin-right: 5px;
+}
+
+#category select, #due-date input{
+    border: none;
+    font-size: 1rem;
+    padding: 5px 0px;
+    cursor: pointer;
+    color: grey;
 }
 
 #buttons{
     text-align: center;
+    padding: 25px;
+}
+
+#buttons > button{
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #e30b0b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#button-1{
+    background-color: black !important; 
+}
+
+
+
+/* common classes */
+
+.border-top-grey{
+    border-top: 2px solid grey;
+    padding: 5px 25px;
+}
+
+.common-heading{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6a6565;
 }

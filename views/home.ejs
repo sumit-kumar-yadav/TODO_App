@@ -1,6 +1,8 @@
 <html>
     <head>
         <title> TODO App </title>
+        <!-- CDN of font awesome for icon -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <!-- css for jquery-ui   datepicker -->
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <!-- css of the file -->
@@ -10,13 +12,13 @@
     <body>
         <form id ="form">
             <h1> TODO App </h1>
-            <div id="description">
-                <label for="description"> Description </label> <br>
+            <div id="description" class="border-top-grey">
+                <label for="description" class="common-heading"> Description </label> <br>
                 <textarea name="description" id="description-area" cols="10" rows="3" placeholder="What do you need to do?"></textarea>
             </div>
-            <div id="catogary-and-due-date-container">
+            <div id="catogary-and-due-date-container" class="border-top-grey">
                 <div id="category">
-                    <label for="category"> CATEGORY </label> <br>
+                    <label for="category" class="common-heading"> CATEGORY </label> <br>
                     <select name="category">
                         <option disabled selected> Choose a category </option>
                         <option value="personal"> Personal </option>
@@ -27,21 +29,28 @@
                     </select>
                 </div>
                 <div id="due-date">
-                    <label for="datepicker">DUE DATE</label> <br>
-                    <input type="text" id="datepicker" placeholder="yyyy-mm-dd">
+                    <label for="datepicker" class="common-heading">DUE DATE</label> <br>
+                    <input type="text" id="datepicker" placeholder="dd-mm-yyyy">
                 </div>
             </div>
-            <div id="buttons">
-                <button>
-                    <!-- addn icon -->
-                    <span> ADD TASK </span>
+            <div id="buttons" class="border-top-grey">
+                <button id="button-1">
+                    <!-- add icon -->
+                    <i class="far fa-calendar-alt"></i>
+                    <i class="fas fa-plus"></i>
+                    <span> &ensp;ADD TASK </span>
                 </button>
                 <button>
                     <!-- delete icon -->
-                    <span> DELETE TASKS </span>
+                    <i class="far fa-trash-alt"></i>
+                    <span> &ensp;DELETE TASKS </span>
                 </button>
             </div>
         </form>
+
+        <section id="task-container">
+            
+        </section>
 
 
 
