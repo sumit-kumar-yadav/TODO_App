@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title> TODO App </title>
+        <!-- css for jquery-ui   datepicker -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <!-- css of the file -->
+        <link rel="stylesheet" type="text/css" href="home.css">
+    </head>
+
+    <body>
+        <form id ="form">
+            <h1> TODO App </h1>
+            <div id="description">
+                <label for="description"> Description </label> <br>
+                <textarea name="description" id="description-area" cols="10" rows="3" placeholder="What do you need to do?"></textarea>
+            </div>
+            <div id="catogary-and-due-date-container">
+                <div id="category">
+                    <label for="category"> CATEGORY </label> <br>
+                    <select name="category">
+                        <option disabled selected> Choose a category </option>
+                        <option value="personal"> Personal </option>
+                        <option value="work"> Work </option>
+                        <option value="school"> School </option>
+                        <option value="cleaning"> Cleaning </option>
+                        <option value="other"> Other </option>
+                    </select>
+                </div>
+                <div id="due-date">
+                    <label for="datepicker">DUE DATE</label> <br>
+                    <input type="text" id="datepicker" placeholder="yyyy-mm-dd">
+                </div>
+            </div>
+            <div id="buttons">
+                <button>
+                    <!-- addn icon -->
+                    <span> ADD TASK </span>
+                </button>
+                <button>
+                    <!-- delete icon -->
+                    <span> DELETE TASKS </span>
+                </button>
+            </div>
+        </form>
+
+
+
+
+        <!-- js for jquery-ui   datepicker -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <script src="home.js"></script>
+    </body>
+
+</html>
