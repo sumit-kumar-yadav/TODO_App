@@ -10,16 +10,16 @@
     </head>
 
     <body>
-        <form id ="form">
+        <form id ="form" action="create-list" method="POST">
             <h1> TODO App </h1>
             <div id="description" class="border-top-grey">
                 <label for="description" class="common-heading"> Description </label> <br>
-                <textarea name="description" id="description-area" cols="10" rows="3" placeholder="What do you need to do?"></textarea>
+                <textarea name="description" id="description-area" required cols="10" rows="3" placeholder="What do you need to do?"></textarea>
             </div>
             <div id="catogary-and-due-date-container" class="border-top-grey">
                 <div id="category">
                     <label for="category" class="common-heading"> CATEGORY </label> <br>
-                    <select name="category">
+                    <select name="category" id="category" required>
                         <option disabled selected> Choose a category </option>
                         <option value="personal"> Personal </option>
                         <option value="work"> Work </option>
@@ -30,17 +30,16 @@
                 </div>
                 <div id="due-date">
                     <label for="datepicker" class="common-heading">DUE DATE</label> <br>
-                    <input type="text" id="datepicker" placeholder="dd-mm-yyyy">
+                    <input type="text" name="due-date" id="datepicker" placeholder="dd-mm-yyyy" required>
                 </div>
             </div>
             <div id="buttons" class="border-top-grey">
-                <button id="button-1">
+                <button id="button-1" type="submit">
                     <!-- add icon -->
-                    <i class="far fa-calendar-alt"></i>
                     <i class="fas fa-plus"></i>
                     <span> &ensp;ADD TASK </span>
                 </button>
-                <button>
+                <button type="button">
                     <!-- delete icon -->
                     <i class="far fa-trash-alt"></i>
                     <span> &ensp;DELETE TASKS </span>
@@ -48,9 +47,8 @@
             </div>
         </form>
 
-        <section id="task-container">
-            
-        </section>
+        
+        
 
 
 

@@ -15,10 +15,15 @@ h1{
     text-align: center;
 }
 
+h1:hover{
+    color:orange;
+}
+
 #description-area{
     width: 100%;
     font-size: 1.1rem;
     border: none;
+    cursor: pointer;
 }
 
 #catogary-and-due-date-container{
@@ -60,8 +65,32 @@ h1{
     cursor: pointer;
 }
 
+#buttons > button:active{
+    transform: scale(0.9);
+}
+
 #button-1{
     background-color: black !important; 
+}
+
+
+#task-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.task{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task>div{
+    width: 50%;
+    height: auto;
 }
 
 

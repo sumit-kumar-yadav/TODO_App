@@ -1,10 +1,14 @@
 const express = require('express');
 const port = 8000;
 
+const db = require('./config/mongoose');
 const app = express();
 
 // Accessing the static files like css, js 
 app.use(express.static('assets'));
+
+// Express parser to parse the form data into js object
+app.use(express.urlencoded());
 
 // use express router
 app.use('/', require('./routes/index.js'));
