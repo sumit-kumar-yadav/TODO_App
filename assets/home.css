@@ -74,9 +74,14 @@ h1:hover{
 }
 
 
+
+
+                        /* Added lists */
+
 #task-container{
     display: flex;
     flex-direction: column;
+    margin: 0px 25px;
 }
 
 .task{
@@ -84,13 +89,38 @@ h1:hover{
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
+    margin-top: 10px;
+    border-top: 2px solid #6a6565;
+}
+
+.task>input{
+    margin-top: 20px;
+    align-self: flex-start;
 }
 
 .task>div{
-    width: 50%;
+    width: 70%;
     height: auto;
+    margin-left: 10px;
+}
+
+.task>div>span{
+    color: gray;
+}
+
+.task>button{
+    /* align-self: flex-end; */
+    width: 80px;
+    border: none;
+    margin-left: auto;
+    /* margin-left: auto;    Important for my reference */
+    padding: 5px;
+    font-size: large;
+    letter-spacing: 2px;
+    /* background-color: ;
+    color: white; */
 }
 
 

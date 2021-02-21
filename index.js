@@ -1,7 +1,11 @@
 const express = require('express');
 const port = 8000;
 
+// mongoose to db connection
 const db = require('./config/mongoose');
+// const TaskList = require('./models/task_list');
+
+// express is fired
 const app = express();
 
 // Accessing the static files like css, js 

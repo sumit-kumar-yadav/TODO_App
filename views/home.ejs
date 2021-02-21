@@ -48,7 +48,25 @@
         </form>
 
         
-        
+        <form id="task-container" action="delete-list" method="POST">
+            <% for(let i of task_list){ %>
+                <div class="task">
+                    <input type="checkbox" name="" value="">
+                    <div>
+                        <p class="common-heading">
+                            <%= i.description %>
+                        </p>
+                        <i class="far fa-calendar-alt"></i>
+                        <span>
+                            <%= i.dueDate %>
+                        </span>
+                    </div>
+                    <button type="button"> <%= i.category %> </button>
+                </div>
+            <% } %>
+        </form>
+
+
 
 
 
