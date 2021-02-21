@@ -2,6 +2,7 @@ body{
     font-family: sans-serif;
     /* background-color: #eefeff; */
     letter-spacing: 2px;
+    /* position: relative; */
 }
 
 #form{
@@ -50,29 +51,16 @@ h1:hover{
     height: 30px;
 }
 
-#buttons{
-    text-align: center;
-    padding: 25px;
+#button-container{
+    /* text-align: center; */
+    padding: 25px 0px;
 }
 
-#buttons > button{
-    padding: 15px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    background-color: #e30b0b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+#add-button{
+    background-color: black;
+    margin-left: calc(50% - 220px);
 }
 
-#buttons > button:active{
-    transform: scale(0.9);
-}
-
-#button-1{
-    background-color: black !important; 
-}
 
 
 
@@ -84,8 +72,18 @@ h1:hover{
     display: flex;
     flex-direction: column;
     margin: 0px 25px;
+    position: relative;
     /* overflow-y: scroll; */
 }
+
+#delete-button{
+    background-color: red;
+    position: absolute;
+    right: calc(50% - 220px);
+    top: -101px;
+    /* top: -calc(margin-bottom of upper form + padding-bottom of div + height of button) */
+}
+
 
 .task{
     width: 100%;
@@ -146,6 +144,26 @@ h1:hover{
     color: #6a6565;
     text-align: justify;
     line-height: 1.3rem;
+}
+
+.common-button-style{
+    width: 210px;
+    height: 60px;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.common-button-style:active{
+    transform: scale(0.9);
+}
+
+.common-button-style:hover{
+    background-color: #0a6060 !important;
 }
 
 
