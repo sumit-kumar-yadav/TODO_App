@@ -47,6 +47,7 @@ h1:hover{
     padding: 5px 0px;
     cursor: pointer;
     color: grey;
+    height: 30px;
 }
 
 #buttons{
@@ -79,9 +80,11 @@ h1:hover{
                         /* Added lists */
 
 #task-container{
+    /* height: calc(50vh); */
     display: flex;
     flex-direction: column;
     margin: 0px 25px;
+    /* overflow-y: scroll; */
 }
 
 .task{
@@ -112,15 +115,14 @@ h1:hover{
 
 .task>button{
     /* align-self: flex-end; */
-    width: 80px;
+    width: 100px;
     border: none;
     margin-left: auto;
     /* margin-left: auto;    Important for my reference */
-    padding: 5px;
+    padding: 10px;
     font-size: large;
     letter-spacing: 2px;
-    /* background-color: ;
-    color: white; */
+    color: white;
 }
 
 
@@ -136,4 +138,34 @@ h1:hover{
     font-size: 1rem;
     font-weight: 600;
     color: #6a6565;
+}
+
+.common-description{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6a6565;
+    text-align: justify;
+    line-height: 1.3rem;
+}
+
+
+/* color of buttons on the basis of category */
+.personal{
+    background-color: #e30b0b;
+}
+
+.work{
+    background-color: #111173;
+}
+
+.school{
+    background-color: #0a6060;
+}
+
+.cleaning{
+    background-color: black;
+}
+
+.other{
+    background-color: orange;
 }
