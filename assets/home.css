@@ -2,7 +2,6 @@ body{
     font-family: sans-serif;
     /* background-color: #eefeff; */
     letter-spacing: 2px;
-    /* position: relative; */
 }
 
 #form{
@@ -25,7 +24,19 @@ h1:hover{
     font-size: 1.1rem;
     border: none;
     cursor: pointer;
+    background-color: inherit;
 }
+
+/* #description-area:valid{
+    // valid if there is some input
+    background-color: red;
+} */
+
+#description-area:focus{
+    /* // focus works only with form elements (elements which takes input)*/
+    background-color: rgb(226, 222, 222);
+}
+
 
 #catogary-and-due-date-container{
     width: calc(100% - 50px);
@@ -35,12 +46,18 @@ h1:hover{
     /* border: 1px solid black; */
 }
 
+
 #category{
     width: 50%;
     height: 50px;
     border-right: 2px solid grey;
     margin-right: 5px;
 }
+
+#due-date{
+    width: 45%;
+}
+
 
 #category select, #due-date input{
     border: none;
@@ -96,10 +113,16 @@ h1:hover{
     border-top: 2px solid #6a6565;
 }
 
-.task>input{
+.checkbox{
     margin-top: 20px;
     align-self: flex-start;
 }
+
+/* // when checkbox is checked, it's immediate sibling should line-through */
+.checkbox:checked + div{
+    text-decoration: line-through;
+}
+
 
 .task>div{
     width: 70%;

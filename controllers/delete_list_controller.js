@@ -7,6 +7,11 @@ module.exports.delete_list = function(req, res){
 
     console.log(typeof(idCollection));
 
+    // If req.body is empty, i.e task is not seleted, then idCollection will be undefined.
+    if(idCollection == undefined){
+        return res.redirect('back');
+    }
+
     // if only one is selected to delete
     if(typeof(idCollection) === "string"){
         TaskList.findByIdAndDelete(idCollection, function(err){
