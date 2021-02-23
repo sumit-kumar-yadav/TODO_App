@@ -1,6 +1,6 @@
 body{
     font-family: sans-serif;
-    /* background-color: #eefeff; */
+    background-color:  #f6f6f6;
     letter-spacing: 2px;
 }
 
@@ -113,19 +113,25 @@ h1:hover{
     border-top: 2px solid #6a6565;
 }
 
+.task:hover{
+    background-color: rgb(213, 247, 235);
+}
+
 .checkbox{
     margin-top: 20px;
     align-self: flex-start;
+    cursor: pointer;
 }
 
 /* // when checkbox is checked, it's immediate sibling should line-through */
 .checkbox:checked + div{
     text-decoration: line-through;
+    background-color: #f7d3d3;
 }
 
 
 .task>div{
-    width: 70%;
+    width: calc(100% - 150px);
     height: auto;
     margin-left: 10px;
 }
@@ -209,4 +215,23 @@ h1:hover{
 
 .other{
     background-color: orange;
+}
+
+
+            /* media query */
+
+@media screen and (max-width: 576px){
+    #add-button{
+        margin-left: calc(50% - 105px);
+    }
+    #delete-button{
+        right: calc(50% - 105px);
+        top: -70px;
+    }
+    #task-container{
+        margin-top: 60px;
+    }
+    .task>div{
+        width: 95%;
+    }
 }
