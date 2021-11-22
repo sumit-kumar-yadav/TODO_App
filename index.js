@@ -1,4 +1,4 @@
-require('dotenv');   // For heroku
+require('dotenv').config()   // For heroku
 
 const express = require('express');
 const port = process.env.PORT || 8000;
