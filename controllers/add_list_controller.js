@@ -6,7 +6,9 @@ const TaskList = require('../models/task_list');
 
 module.exports.add_list = function(req, res){
     console.log(req.body);
-    
+    if(!req.body.category){
+        return res.redirect('back');
+    }
 
     // Change date format using moment.js liberary
     var newDate = req.body["due-date"];
