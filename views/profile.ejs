@@ -1,14 +1,14 @@
 <!-- css of the file -->
 <link rel="stylesheet" type="text/css" href="/css/home.css">
 
-<form id ="form" action="" method="">
+<form id ="form" action="/create-list" method="POST">
     <h3 style="text-align: right;">
-        <small><a style="color: grey; text-decoration: none;" href="/users/auth"><span style="background-color: darkorange; background-color: darkorange;
+        <small><a style="color: grey; text-decoration: none;" href="/users/sign-out"><span style="background-color: darkorange; background-color: darkorange;
             padding: 4px;
             border-radius: 6px;
-            color: white;">Sign in / Sign up</span></a> </small>
+            color: white;">Sign Out</span></a> </small>
     </h3>
-    <h1> <span>TODO App</span> </h1>
+    <h1> <span>TODO App</span></h1>
     <div id="description" class="border-top-grey">
         <label for="description" class="common-heading"> Description </label> <br>
         <textarea name="description" id="description-area" required cols="10" rows="3" placeholder="What do you need to do?"></textarea>
@@ -31,13 +31,11 @@
         </div>
     </div>
     <div id="button-container" class="border-top-grey">
-        <a style="color: white; text-decoration: none;" href="/users/auth">
-            <button id="add-button" class="common-button-style" type="button">
-                <!-- add icon -->
-                <i class="fas fa-plus"></i>
-                <span> &ensp;ADD TASK </span>
-            </button>
-        </a>
+        <button id="add-button" class="common-button-style" type="submit">
+            <!-- add icon -->
+            <i class="fas fa-plus"></i>
+            <span> &ensp;ADD TASK </span>
+        </button>
         
     </div>
 </form>
@@ -50,19 +48,21 @@
         <span> &ensp;DELETE TASKS </span>
     </button>
 
+    <% for(let i of task_list){ %>
         <div class="task">
-            <input class="checkbox" type="checkbox">
-            <div id="div0">
+            <input class="checkbox" type="checkbox" name="delete" value="<%= i._id %>">
+            <div id="div<%= i %>">
                 <p class="common-description">
-                    Your added task will appear here
+                    <%= i.description %>
                 </p>
                 <i class="far fa-calendar-alt"></i>
                 <span>
-                    <%= new Date().toDateString() %>
+                    <%= i.dueDate %>
                 </span>
             </div>
-            <button type="button" class="work"> work </button>
+            <button type="button" class="<%= i.category %>"> <%= i.category %> </button>
         </div>
+    <% } %>
 </form>
 
 

@@ -10,10 +10,16 @@
   "author": "Sumit",
   "license": "ISC",
   "dependencies": {
+    "connect-mongo": "^4.2.2",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.2",
     "moment": "^2.29.1",
-    "mongoose": "^5.11.17"
+    "mongoose": "^5.11.17",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0"
   }
 }

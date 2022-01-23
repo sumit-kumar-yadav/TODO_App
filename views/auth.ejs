@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text/css" href="/css/auth.css">
+
+<div id="auth-container">
+    <p>
+        <button type="button"> Sign up / Sign up </button>
+        <button type="button"> Sign up / Sign ip </button>
+    </p>
+
+    <form id="sign-up-container" action="/users/create" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="password" name="password" placeholder="Your Password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm_password" required>
+        <input type="submit" value="Sign Up">
+    </form>
+
+    <form id="sign-in-container" action="/users/create-session" method="POST">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Sign In">
+    </form>
+</div>
+
+

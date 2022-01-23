@@ -5,7 +5,7 @@ const moment = require('moment'); // require
 const TaskList = require('../models/task_list');
 
 module.exports.add_list = function(req, res){
-    console.log(req.body);
+    // console.log(req.body);
     if(!req.body.category){
         return res.redirect('back');
     }
@@ -13,9 +13,10 @@ module.exports.add_list = function(req, res){
     // Change date format using moment.js liberary
     var newDate = req.body["due-date"];
     newDate = moment(newDate, 'DD/MM/YYYY').format('dddd MMMM D Y');
-    console.log(newDate);
+    // console.log(newDate);
 
     TaskList.create({
+        user: req.user.id,
         description: req.body.description,
         category: req.body.category,
         dueDate: newDate        //req.body["due-date"] // -->>original format which was fetched
