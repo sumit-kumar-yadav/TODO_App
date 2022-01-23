@@ -1,8 +1,51 @@
 #auth-container{
     max-width: 420px;
     min-width: 300px;
-    border: 1px solid;
     display: flex;
     flex-direction: column;
     margin: auto;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-top: 70px;
+    background-color: #d9d99b;
+    box-shadow: 0px 2px 6px -1px #753434;
 }
+
+.toggle-auth{
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: aquamarine;
+    cursor: pointer;
+    border: none;
+}
+
+.auth-form{
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+#sign-up-container{
+    display: flex;
+}
+.auth-form input{
+    padding: 6px;
+    margin: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.auth-form input[type="submit"]{
+    background-color: #d57e06;
+    color: white;
+    cursor: pointer;
+}
+
+.active-form-button{
+    background-color: rgb(156, 71, 71);
+    color: aliceblue;
+}
+/* .active-form{
+    display: flex;
+} */

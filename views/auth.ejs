@@ -1,12 +1,12 @@
 <link rel="stylesheet" type="text/css" href="/css/auth.css">
 
 <div id="auth-container">
-    <p>
-        <button type="button"> Sign up / Sign up </button>
-        <button type="button"> Sign up / Sign ip </button>
+    <p id="auth-heading">
+        <button class="toggle-auth active-form-button" data-form-id="sign-up-container" type="button"> Sign Up </button>
+        <button class="toggle-auth" data-form-id="sign-in-container" type="button"> Sign In </button>
     </p>
 
-    <form id="sign-up-container" action="/users/create" method="POST">
+    <form id="sign-up-container" class="auth-form" action="/users/create" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <input type="password" name="password" placeholder="Your Password" required>
@@ -14,11 +14,32 @@
         <input type="submit" value="Sign Up">
     </form>
 
-    <form id="sign-in-container" action="/users/create-session" method="POST">
+    <form id="sign-in-container" class="auth-form" action="/users/create-session" method="POST">
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Password" required>
         <input type="submit" value="Sign In">
     </form>
 </div>
 
+
+<script>
+    $('.toggle-auth').click(function(e){
+        let button = $(this);
+
+        // Remove active class 
+        $('.toggle-auth').each(function(){
+            $(this).removeClass('active-form-button');
+        });
+        $('.auth-form').css({
+            'display': 'none'
+        });
+
+        // Add active class
+        button.addClass('active-form-button');
+        let formId = button.attr('data-form-id');
+        $(`#${formId}`).css({
+            'display': 'flex'
+        });
+    });
+</script>
 

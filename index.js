@@ -41,12 +41,12 @@ app.use(session({
     secret: 'changeItLaterOn',
     saveUninitialized: false,    
     resave: false,  // Don't save same data again and again
-    cookie: {   // Timeout of the session in millisec, bro try kroo save krke.... ok____ it's still throwing error
+    cookie: {   // Timeout of the session in millisec, 
         maxAge: (1000 * 60 * 1000)
     },
     store: MongoStore.create(
         {
-            mongoUrl: 'mongodb://localhost/codeial_development',
+            mongoUrl: 'mongodb://localhost/TODO_db',
             autoRemove: 'disabled'
         },
         function(err){
