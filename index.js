@@ -6,6 +6,7 @@ const port = process.env.PORT || 8000;
 
 // mongoose to db connection
 const db = require('./config/mongoose');
+
 // used for session cookie
 const session = require('express-session');
 const passport = require('passport');
@@ -46,7 +47,7 @@ app.use(session({
     },
     store: MongoStore.create(
         {
-            mongoUrl: 'mongodb://localhost/TODO_db',
+            mongoUrl: process.env.MONGODB_URL,
             autoRemove: 'disabled'
         },
         function(err){
